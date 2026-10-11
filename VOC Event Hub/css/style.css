@@ -127,7 +127,7 @@ main {
   text-decoration: none;
   border: 1px solid transparent;
   font-weight: 700;
-  cursor: default;
+  cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -305,5 +305,99 @@ main {
   .site-footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+/* Registration form improvements */
+
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+.primary-btn:focus-visible,
+.secondary-btn:focus-visible,
+.menu-toggle:focus-visible,
+.nav-links a:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 3px;
+}
+
+.registration-wrap h2 {
+  margin-bottom: 0.5rem;
+}
+
+.registration-intro {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+}
+
+.register-form {
+  gap: 1.1rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.register-form label {
+  line-height: 1.5;
+}
+
+.register-form input:focus-visible,
+.register-form select:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.25);
+  border-color: var(--brand);
+}
+
+.register-form input[aria-invalid="true"] {
+  border-color: #dc2626;
+}
+
+.field-error {
+  color: #b91c1c;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.form-message {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  line-height: 1.5;
+}
+
+.form-message.success {
+  color: #166534;
+  background: #dcfce7;
+  border: 1px solid #86efac;
+}
+
+.form-message.error {
+  color: #991b1b;
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+}
+
+.register-submit {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.registration-note {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .register-form {
+    padding: 1rem;
   }
 }
